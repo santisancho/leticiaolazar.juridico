@@ -9,9 +9,9 @@ const areas = [
     index: '01',
     icon: Users,
     title: 'Derecho de\nFamilia',
-    tagline: 'Protegemos lo que más importa',
+    tagline: 'Protejo lo que más importa',
     description:
-      'Acompañamos en los momentos más sensibles con discreción, empatía y sólida experiencia jurídica.',
+      'Acompaño en los momentos más sensibles con discreción, empatía y sólida experiencia jurídica.',
     items: [
       { name: 'Alimentos'},
       { name: 'Derecho de comunicación'},
@@ -23,9 +23,9 @@ const areas = [
     index: '02',
     icon: Briefcase,
     title: 'Derecho\nLaboral',
-    tagline: 'Defendemos tus derechos',
+    tagline: 'Defiendo tus derechos',
     description:
-      'Representamos trabajadores y empleadores con enfoque estratégico y resultados concretos.',
+      'Defensa de los derechos del trabajador con atención personalizada y acompañamiento legal en cada etapa.',
     items: [
       { name: 'Despidos'},
       { name: 'Trabajo no registrado'},
@@ -137,7 +137,7 @@ function AreaCard({ area, delay, sectionVisible }: {
           </ul>
 
           <a
-            href="https://wa.me/5493434000000"
+            href="https://wa.me/5493489484345"
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}

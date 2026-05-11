@@ -17,7 +17,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: 'Leticia Olazar — Estudio Jurídico',
   description:
-    'Asesoramiento jurídico profesional en derecho laboral, familia y sucesiones. Paraná, Entre Ríos.',
+    'Asesoramiento jurídico profesional en derecho laboral, familia y sucesiones. Campana, Buenos Aires.',
   keywords: [
     'abogada',
     'estudio jurídico',
@@ -25,12 +25,12 @@ export const metadata: Metadata = {
     'derecho de familia',
     'sucesiones',
     'Leticia Olazar',
-    'Paraná',
-    'Entre Ríos',
+    'Campana',
+    'Buenos Aires',
   ],
   openGraph: {
     title: 'Leticia Olazar — Estudio Jurídico',
-    description: 'Asesoramiento jurídico profesional y personalizado en Paraná.',
+    description: 'Asesoramiento jurídico profesional y personalizado en Campana.',
     type: 'website',
   },
   themeColor: '#0d0d0d',

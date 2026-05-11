@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Instagram } from 'lucide-react'
 
 const navLinks = [
@@ -32,26 +33,27 @@ export default function Footer() {
           {/* Brand block */}
           <div className="col-span-2">
             <div className="mb-5">
-              <span className="font-serif text-2xl text-[#0d0d0d] block leading-none">
-                Leticia Olazar
-              </span>
-              <span className="font-sans text-[9px] tracking-[0.35em] uppercase text-[#a8a6a1]">
-                Estudio Jurídico
-              </span>
+              <Image
+                src="/img/logoleti.jpeg"
+                alt="Leticia Olazar Estudio Juridico"
+                width={1064}
+                height={710}
+                className="h-auto w-48 md:w-56"
+              />
             </div>
             <p className="font-sans text-sm text-[#6b6b6b] leading-relaxed max-w-xs mb-6">
               Asesoramiento jurídico profesional en derecho laboral,
               familia y sucesiones. Campana, Buenos Aires.
             </p>
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/olazarleticia.estudiojuridico/?hl=es/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-sans text-xs text-[#6b6b6b] hover:text-[#0d0d0d] transition-colors duration-200 group"
               aria-label="Instagram del estudio"
             >
               <Instagram size={14} className="group-hover:scale-110 transition-transform duration-200" />
-              @leticiaolazar.juridico
+              @olazarleticia.estudiojuridico
             </a>
           </div>
 

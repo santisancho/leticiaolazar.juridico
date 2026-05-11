@@ -37,9 +37,9 @@ export default function Hero() {
       <div
         className="absolute inset-0 opacity-25 transition-transform duration-700 ease-out"
         style={{
-          backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/leticia%20estudio-QM7KyJ6LNq6oeqiEl8BFKBnE5acOHr.jpeg')`,
+          backgroundImage: `url('/img/cartel-del-estudio-de-leticia.jpeg')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center 20%',
+          backgroundPosition: 'center center',
           transform: `translate(${mousePos.x * 0.3}px, ${mousePos.y * 0.3}px) scale(1.06)`,
         }}
       />
@@ -117,7 +117,7 @@ export default function Hero() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://wa.me/5493434000000"
+                href="https://wa.me/5493489484345"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-sans text-[11px] tracking-[0.15em] uppercase bg-white text-[#0d0d0d] px-6 py-3 hover:bg-white/90 transition-all duration-300 hover:-translate-y-0.5"

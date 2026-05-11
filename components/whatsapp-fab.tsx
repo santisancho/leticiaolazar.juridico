@@ -21,7 +21,7 @@ export default function WhatsAppFab() {
 
   return (
     <a
-      href="https://wa.me/5493434000000?text=Hola%20Leticia%2C%20quisiera%20realizar%20una%20consulta."
+      href="https://wa.me/5493489484345?text=Hola%20Leticia%2C%20quisiera%20realizar%20una%20consulta."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Consultar por WhatsApp"

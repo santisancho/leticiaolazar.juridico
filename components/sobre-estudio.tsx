@@ -7,12 +7,12 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const photos = [
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/leticia%20estudio-QM7KyJ6LNq6oeqiEl8BFKBnE5acOHr.jpeg',
+    src: '/img/leticia-estudio.jpeg',
     alt: 'Leticia Olazar en su escritorio',
     caption: 'Despacho principal',
   },
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cartel%20del%20estudio%20de%20leticia-FHJRkwcN64fa3EQPmjXqPjkaRFSRUJ.jpeg',
+    src: '/img/cartel-del-estudio-de-leticia.jpeg',
     alt: 'Cartel del Estudio Jurídico',
     caption: 'Leticia Olazar · Estudio Jurídico',
   },
@@ -159,7 +159,7 @@ export default function SobreEstudio() {
           >
             <div className="flex flex-col gap-5">
               <p className="font-sans text-white/60 text-base leading-relaxed">
-                Con más de 15 años de trayectoria profesional, fundé este estudio
+                Con más de 18 años de trayectoria profesional, fundé este estudio
                 con la convicción de que cada persona merece un asesoramiento jurídico
                 cercano, claro y comprometido.
               </p>

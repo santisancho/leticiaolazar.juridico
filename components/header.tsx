@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
@@ -48,21 +49,21 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-6 md:px-10 h-[68px] flex items-center justify-between">
           {/* Logo */}
-          <a href="#inicio" className="group flex flex-col leading-none select-none">
-            <span
-              className={`font-serif text-[13px] font-semibold tracking-[0.2em] uppercase transition-colors duration-500 ${
-                onHeroSection ? 'text-white' : 'text-[#0d0d0d]'
+          <a
+            href="#inicio"
+            className="group flex items-center select-none"
+            aria-label="Leticia Olazar Estudio Juridico"
+          >
+            <Image
+              src="/img/logoleti-header.jpeg"
+              alt="Leticia Olazar Estudio Juridico"
+              width={660}
+              height={190}
+              priority
+              className={`h-auto w-[142px] transition-all duration-500 md:w-[174px] ${
+                onHeroSection ? 'shadow-[0_12px_30px_rgba(0,0,0,0.18)]' : ''
               }`}
-            >
-              Leticia Olazar
-            </span>
-            <span
-              className={`font-sans text-[8px] tracking-[0.35em] uppercase transition-colors duration-500 ${
-                onHeroSection ? 'text-white/50' : 'text-[#a8a6a1]'
-              }`}
-            >
-              Estudio Jurídico
-            </span>
+            />
           </a>
 
           {/* Desktop nav */}
@@ -84,7 +85,7 @@ export default function Header() {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://wa.me/5493434000000"
+              href="https://wa.me/5493489484345"
               target="_blank"
               rel="noopener noreferrer"
               className={`hidden md:inline-flex items-center font-sans text-[11px] tracking-[0.12em] uppercase px-5 py-2.5 transition-all duration-300 ${
@@ -115,9 +116,13 @@ export default function Header() {
         }`}
       >
         <div className="flex items-center justify-between px-6 h-[68px] border-b border-white/10">
-          <span className="font-serif text-[13px] tracking-[0.2em] uppercase text-white">
-            Leticia Olazar
-          </span>
+          <Image
+            src="/img/logoleti-header.jpeg"
+            alt="Leticia Olazar Estudio Juridico"
+            width={660}
+            height={190}
+            className="h-auto w-[142px]"
+          />
           <button
             onClick={() => setMenuOpen(false)}
             className="text-white/50 hover:text-white transition-colors"
@@ -143,7 +148,7 @@ export default function Header() {
         </nav>
         <div className="px-6 pb-12">
           <a
-            href="https://wa.me/5493434000000"
+            href="https://wa.me/5493489484345"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center font-sans text-[11px] tracking-[0.15em] uppercase text-white border border-white/30 px-6 py-3 hover:bg-white hover:text-[#0d0d0d] transition-all duration-300"

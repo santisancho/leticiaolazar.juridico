@@ -26,10 +26,17 @@ function WhatsAppIcon() {
 }
 
 const contactItems = [
-  { icon: Phone, label: 'Teléfono', value: '+54 343 400-0000', href: 'tel:+543434000000' },
-  { icon: Mail, label: 'Email', value: 'consultas@leticiaolazar.com.ar', href: 'mailto:consultas@leticiaolazar.com.ar' },
-  { icon: MapPin, label: 'Ubicación', value: 'Paraná, Entre Ríos', href: '#' },
+  { icon: Phone, label: 'Teléfono', value: '+54 9 3489 48-4345', href: 'tel:+5493489484345' },
+  { icon: Mail, label: 'Email', value: 'leticiaolazar@yahoo.com', href: 'mailto:leticiaolazar@yahoo.com' },
+  {
+    icon: MapPin,
+    label: 'Ubicación',
+    value: 'De Dominicis 837 - Campana, Buenos Aires',
+    href: 'https://www.google.com/maps/search/?api=1&query=De+Dominicis+837+Campana+Buenos+Aires',
+  },
 ]
+
+const mapSrc = 'https://www.google.com/maps?q=De%20Dominicis%20837%20Campana%20Buenos%20Aires&output=embed'
 
 export default function Contacto() {
   const { ref, visible } = useInView()
@@ -42,7 +49,7 @@ export default function Contacto() {
     const msg = encodeURIComponent(
       `Hola Leticia, mi nombre es ${form.name}.\n\n${form.message}\n\nTel: ${form.phone || 'no indicado'}`
     )
-    window.open(`https://wa.me/5493434000000?text=${msg}`, '_blank')
+    window.open(`https://wa.me/5493489484345?text=${msg}`, '_blank')
     setSent(true)
   }
 
@@ -63,7 +70,7 @@ export default function Contacto() {
           className={`mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
           <span className="font-sans text-[10px] tracking-[0.35em] uppercase text-white/30 block mb-4">
-            — Escribinos
+            — Escribime
           </span>
           <h2 className="font-serif text-[clamp(2.5rem,6vw,5rem)] leading-tight text-white">
             Hablemos
@@ -80,8 +87,8 @@ export default function Contacto() {
             }`}
           >
             <p className="font-sans text-sm text-white/50 leading-relaxed">
-              Estamos disponibles para escucharte. Contanos tu situación y te
-              responderemos a la brevedad con total discreción y confidencialidad.
+              Estoy disponible para escucharte. Contame tu situación y te
+              responderé a la brevedad con total discreción y confidencialidad.
             </p>
 
             <ul className="flex flex-col gap-7">
@@ -98,6 +105,8 @@ export default function Contacto() {
                       </p>
                       <a
                         href={item.href}
+                        target={item.label === 'Ubicación' ? '_blank' : undefined}
+                        rel={item.label === 'Ubicación' ? 'noopener noreferrer' : undefined}
                         className="font-sans text-sm text-white/60 hover:text-white transition-colors duration-200"
                       >
                         {item.value}
@@ -108,9 +117,19 @@ export default function Contacto() {
               })}
             </ul>
 
+            <div className="overflow-hidden border border-white/10">
+              <iframe
+                src={mapSrc}
+                title="Mapa del estudio jurídico en Campana"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-36 w-full grayscale invert-[0.88] opacity-80"
+              />
+            </div>
+
             {/* WhatsApp button */}
             <a
-              href="https://wa.me/5493434000000"
+              href="https://wa.me/5493489484345"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 font-sans text-[11px] tracking-[0.15em] uppercase bg-[#25D366] text-white px-6 py-4 hover:bg-[#20bc5a] transition-all duration-300 w-fit"
@@ -189,7 +208,7 @@ export default function Contacto() {
                     onFocus={() => setFocused('phone')}
                     onBlur={() => setFocused(null)}
                     className={`w-full bg-transparent border-b-2 py-3 font-sans text-sm text-white placeholder-white/20 outline-none transition-all duration-300 ${focused === 'phone' ? 'border-white' : 'border-white/15'}`}
-                    placeholder="+54 343 ···"
+                    placeholder="+54 9 3489 ···"
                   />
                 </div>
                 <div>
