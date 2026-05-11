@@ -1,0 +1,196 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #f5f4f1;
+  --foreground: #0d0d0d;
+  --card: #ffffff;
+  --card-foreground: #0d0d0d;
+  --popover: #ffffff;
+  --popover-foreground: #0d0d0d;
+  --primary: #0d0d0d;
+  --primary-foreground: #f5f4f1;
+  --secondary: #e8e6e1;
+  --secondary-foreground: #0d0d0d;
+  --muted: #d4d2cd;
+  --muted-foreground: #6b6b6b;
+  --accent: #e8e6e1;
+  --accent-foreground: #0d0d0d;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: #f5f4f1;
+  --border: #d4d2cd;
+  --input: #d4d2cd;
+  --ring: #0d0d0d;
+  --radius: 0.125rem;
+
+  /* Section specific */
+  --ink: #0d0d0d;
+  --ink-soft: #1a1a1a;
+  --paper: #f5f4f1;
+  --paper-warm: #eceae5;
+  --stone: #6b6b6b;
+  --stone-light: #a8a6a1;
+}
+
+@theme inline {
+  --font-sans: var(--font-jakarta);
+  --font-serif: var(--font-space-grotesk);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--paper);
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background-color: #0d0d0d;
+    color: #f5f4f1;
+  }
+}
+
+/* ─── Flip card ─── */
+.flip-card { perspective: 1200px; }
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner,
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flip-card-back { transform: rotateY(180deg); }
+
+/* ─── Reveal mask animation ─── */
+@keyframes revealUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+@keyframes revealFade {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes lineGrow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@keyframes counterUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.reveal-up {
+  overflow: hidden;
+}
+.reveal-up span {
+  display: block;
+  animation: revealUp 0.9s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+.animate-reveal-fade {
+  animation: revealFade 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+.animate-line-grow {
+  transform-origin: left;
+  animation: lineGrow 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+.animate-slide-left {
+  animation: slideInLeft 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+/* Delay utilities */
+.delay-0   { animation-delay: 0ms; }
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+
+/* ─── Cursor-follow text fill effect on cards ─── */
+.area-card-hover-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: color 0.3s ease;
+}
+
+/* ─── Smooth underline nav ─── */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #0d0d0d;
+  transition: width 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+.nav-link-white::after {
+  background: #f5f4f1;
+}
+
+/* ─── Marquee stripe ─── */
+.marquee-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+}
