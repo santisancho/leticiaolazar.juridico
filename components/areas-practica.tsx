@@ -43,8 +43,6 @@ const areas = [
       'Asesoramiento integral en sucesiones, garantizando la correcta transmisión del patrimonio.',
     items: [
       { name: 'Sucesiones'},
-      { name: 'Testamentos'},
-      { name: 'Herencias'},
     ],
   },
 ]

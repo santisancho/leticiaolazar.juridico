@@ -191,6 +191,43 @@ export default function SobreEstudio() {
               ))}
             </ul>
 
+            {/* Jurisdicción — matrículas */}
+            <div
+              className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+              style={{ transitionDelay: '820ms' }}
+            >
+              <div className="border border-white/10 p-5 flex flex-col gap-3">
+                <p className="font-sans text-[8px] tracking-[0.38em] uppercase text-white/25 flex items-center gap-2">
+                  <span className="w-4 h-px bg-white/20" />
+                  Jurisdicción
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-10">
+                  <div className="flex items-start gap-3">
+                    <span className="mt-[5px] w-1.5 h-1.5 rounded-full bg-[#c8b89a] shrink-0" />
+                    <div>
+                      <p className="font-sans text-[10px] tracking-[0.2em] uppercase text-white/70 font-medium">
+                        Ciudad de Buenos Aires
+                      </p>
+                      <p className="font-sans text-[9px] tracking-[0.12em] text-white/30 mt-0.5">
+                        Matrícula activa · 
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="mt-[5px] w-1.5 h-1.5 rounded-full bg-[#c8b89a] shrink-0" />
+                    <div>
+                      <p className="font-sans text-[10px] tracking-[0.2em] uppercase text-white/70 font-medium">
+                        Provincia de Buenos Aires
+                      </p>
+                      <p className="font-sans text-[9px] tracking-[0.12em] text-white/30 mt-0.5">
+                        Matrícula activa · 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* CTA */}
             <div
               className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}

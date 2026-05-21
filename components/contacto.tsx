@@ -31,12 +31,12 @@ const contactItems = [
   {
     icon: MapPin,
     label: 'Ubicación',
-    value: 'De Dominicis 837 - Campana, Buenos Aires',
-    href: 'https://www.google.com/maps/search/?api=1&query=De+Dominicis+837+Campana+Buenos+Aires',
+    value: 'Av. Rocca 189, Piso 9A · CABA',
+    href: 'https://www.google.com/maps/search/?api=1&query=Av+Rocca+189+Buenos+Aires',
   },
 ]
 
-const mapSrc = 'https://www.google.com/maps?q=De%20Dominicis%20837%20Campana%20Buenos%20Aires&output=embed'
+const mapSrc = 'https://www.google.com/maps?q=Av%20Rocca%20189%20Buenos%20Aires&output=embed'
 
 export default function Contacto() {
   const { ref, visible } = useInView()
