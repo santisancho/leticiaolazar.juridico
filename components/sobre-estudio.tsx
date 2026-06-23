@@ -16,7 +16,33 @@ const photos = [
     alt: 'Cartel del Estudio Jurídico',
     caption: 'Leticia Olazar · Estudio Jurídico',
   },
+  {
+    src: '/img/casual.jpeg',
+    alt: 'Foto 3',
+    caption: 'Despacho principal',
+  },
+  {
+    src: '/img/de frente.jpeg',
+    alt: 'Foto 4',
+    caption: 'Estudio Jurídico',
+  },
+  {
+    src: '/img/de perfil sonriendo.jpeg',
+    alt: 'Foto 5',
+    caption: 'Atención personalizada',
+  },
+  {
+    src: '/img/trabajando casual.jpeg',
+    alt: 'Foto 6',
+    caption: 'Asesoramiento legal',
+  },
+  {
+    src: '/img/trabajando.jpeg',
+    alt: 'Foto 7',
+    caption: 'Trayectoria profesional',
+  },
 ]
+
 
 const values = [
   { num: '01', label: 'Atención personalizada', desc: 'Cada cliente es único. Te acompañamos en cada etapa del proceso.' },
